@@ -23,9 +23,6 @@ publication or article DOI is claimed. The citation below identifies the softwar
 **Study contributor:** Georgia Karali — Department of Mathematics, National and
 Kapodistrian University of Athens.
 
-The software authorship and software citation belong to Vangelis D. Karalis.
-Georgia Karali is acknowledged here for her contribution to the study.
-
 The repository reproduces **two figures and two tables**, includes independent
 numerical audits, and supplies the original numerical outputs for comparison.
 No external data, credentials, GPU, or LaTeX installation is required.
