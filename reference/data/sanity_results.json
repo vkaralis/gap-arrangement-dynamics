@@ -1,0 +1,71 @@
+{
+  "parameters": {
+    "alpha": 0.3333333333333333,
+    "delta": 0.25,
+    "eta": 0.5,
+    "beta": 0,
+    "m0": 1,
+    "gamma": 1,
+    "kappa": 1,
+    "lambda_": 1,
+    "T": 0.01,
+    "time_mesh_points": 101
+  },
+  "method": "classical RK4 dt=1e-5 (refinement from 2e-5); analytic affine heat cell; periodic label quadrature",
+  "reference_spatial_refinement_max": 6.661338147750939e-16,
+  "particle_rows": [
+    {
+      "n": 4,
+      "N": 64,
+      "scale": 0.06250000000000001,
+      "max_mesh_E_plus_D": 0.03173103704908592,
+      "scaled_error": 0.5076965927853747,
+      "time_refinement_difference": 2.298161660974074e-13
+    },
+    {
+      "n": 8,
+      "N": 512,
+      "scale": 0.015625000000000003,
+      "max_mesh_E_plus_D": 0.0071572236938113876,
+      "scaled_error": 0.4580623164039288,
+      "time_refinement_difference": 1.5946133302691123e-12
+    },
+    {
+      "n": 16,
+      "N": 4096,
+      "scale": 0.003906250000000001,
+      "max_mesh_E_plus_D": 0.0016823825381974689,
+      "scaled_error": 0.430689929778552,
+      "time_refinement_difference": 8.642420112892069e-12
+    }
+  ],
+  "C2": 0.7305071198541773,
+  "C2_over_2": 0.36525355992708863,
+  "observable_rows": [
+    {
+      "t": 0.001,
+      "ratio": 0.3286507706651071,
+      "refinement_difference": 8.919627511502206e-12
+    },
+    {
+      "t": 0.0005,
+      "ratio": 0.3462720865257083,
+      "refinement_difference": 2.1417863346035425e-11
+    },
+    {
+      "t": 0.0002,
+      "ratio": 0.35748983114966176,
+      "refinement_difference": 6.825286437037358e-11
+    },
+    {
+      "t": 0.0001,
+      "ratio": 0.3613424812731302,
+      "refinement_difference": 1.0742404363685283e-10
+    },
+    {
+      "t": 5e-05,
+      "ratio": 0.3632906509651942,
+      "refinement_difference": 2.7337095017570986e-10
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite this software as described below."
+type: software
+title: "Gap arrangement in nonlocal particle transport: simulation code"
+authors:
+  - family-names: "Karalis"
+    given-names: "Vangelis D."
+version: 1.0.0
+date-released: 2026-11-02
+repository-code: "https://github.com/vkaralis/gap-arrangement-dynamics"
+url: "https://github.com/vkaralis/gap-arrangement-dynamics"
+license: MIT
+abstract: >-
+  Reproducible Python experiments for maximum-norm particle approximation,
+  arrangement-dependent separation, and fast cell relaxation in nonlocal
+  particle transport, with independent numerical validation.
+keywords:
+  - gap-arrangement-dynamics
+  - particle-dynamics
+  - interacting-particle-systems
+  - gap-diffusion
+  - two-scale-modeling
+  - nonlinear-diffusion
+  - wasserstein-distance
+  - scientific-computing
+  - mathematical-modeling

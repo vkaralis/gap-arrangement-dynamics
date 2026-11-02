@@ -1,0 +1,112 @@
+{
+  "parameters": {
+    "alpha": 0.3333333333333333,
+    "delta": 0.25,
+    "eta": 0.5,
+    "beta": 0.5,
+    "lambda_": 1,
+    "T": 0.02
+  },
+  "method": "RK4; Fourier collocation in theta; periodic trapezoidal a quadrature; cubic periodic reference sampling; exact circular atomic W1; continuum displacement maps resampled at 8192 labels",
+  "cell_refinement": {
+    "1": {
+      "max_X": 7.216449660063518e-15,
+      "max_G": 4.4986236957811343e-13
+    },
+    "2": {
+      "max_X": 6.439293542825908e-15,
+      "max_G": 1.0437251063422082e-10
+    }
+  },
+  "W1_reference_refinement": 1.2115075042891214e-12,
+  "W1_cell_solver_refinement": 3.644274552266902e-16,
+  "W1_reference_labels": 8192,
+  "observable_ratio_refinement": 1.1577196692235024e-09,
+  "zero_continuum_difference": 0.0,
+  "C2": 1.4839688223500591,
+  "C2_over_2": 0.7419844111750296,
+  "affine_C2_over_2": 0.36525355992708863,
+  "final_cell_W1": 2.7102358988436724e-05,
+  "particle_rows": [
+    {
+      "p": 8,
+      "N": 512,
+      "scale": 0.015625,
+      "max_mesh_E_plus_D": 0.010276897865827084,
+      "scaled_error": 0.6577214634129334,
+      "time_refinement_E_plus_D": 1.9363399772487355e-12,
+      "time_refinement_W1": 1.2433088412977522e-16,
+      "W1_initial": 0.00041720529580667904,
+      "W1_final": 8.675357188412258e-05,
+      "W1_final_error": 5.965121289568585e-05,
+      "zero_W1_initial": 0.00041720529580667904,
+      "zero_W1_final": 0.0004172634041313858,
+      "min_gap": 0.5382187812198822,
+      "max_gap": 1.9462394860433108
+    },
+    {
+      "p": 16,
+      "N": 4096,
+      "scale": 0.00390625,
+      "max_mesh_E_plus_D": 0.0023300180766284706,
+      "scaled_error": 0.5964846276168885,
+      "time_refinement_E_plus_D": 9.553136059992084e-12,
+      "time_refinement_W1": 2.519414798313191e-17,
+      "W1_initial": 0.00010024148071646085,
+      "W1_final": 3.0404526776183914e-05,
+      "W1_final_error": 3.3021677877471903e-06,
+      "zero_W1_initial": 0.00010024148071646085,
+      "zero_W1_final": 0.00010024163504699537,
+      "min_gap": 0.5400781409175579,
+      "max_gap": 1.942732779717744
+    },
+    {
+      "p": 32,
+      "N": 32768,
+      "scale": 0.0009765625,
+      "max_mesh_E_plus_D": 0.0005627158407699451,
+      "scaled_error": 0.5762210209484238,
+      "time_refinement_E_plus_D": 4.7296611072056294e-11,
+      "time_refinement_W1": 2.890076416031673e-17,
+      "W1_initial": 2.481666801081569e-05,
+      "W1_final": 2.7268692343090495e-05,
+      "W1_final_error": 1.6633335465377145e-07,
+      "zero_W1_initial": 2.481666801081569e-05,
+      "zero_W1_final": 2.481667172319492e-05,
+      "min_gap": 0.5405810328702501,
+      "max_gap": 1.941661370359725
+    }
+  ],
+  "observable_rows": [
+    {
+      "t": 0.001,
+      "affine_J_over_t2": 0.32865077066599,
+      "nonlinear_J_over_t2": 0.5863219879532359,
+      "nonlinear_W1_over_t2": 0.7127358509261504
+    },
+    {
+      "t": 0.0005,
+      "affine_J_over_t2": 0.34627208650580343,
+      "nonlinear_J_over_t2": 0.658125483153107,
+      "nonlinear_W1_over_t2": 0.7996678632458382
+    },
+    {
+      "t": 0.0002,
+      "affine_J_over_t2": 0.3574898311699782,
+      "nonlinear_J_over_t2": 0.7068447920406057,
+      "nonlinear_W1_over_t2": 0.8586403920742794
+    },
+    {
+      "t": 0.0001,
+      "affine_J_over_t2": 0.3613424811184482,
+      "nonlinear_J_over_t2": 0.7241342595910865,
+      "nonlinear_W1_over_t2": 0.8795664549977236
+    },
+    {
+      "t": 5e-05,
+      "affine_J_over_t2": 0.36329065079977846,
+      "nonlinear_J_over_t2": 0.7329877855068789,
+      "nonlinear_W1_over_t2": 0.8902817969599319
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+name: Full reproduction
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version-file: '.python-version'
+      - run: python scripts/clean_reproduce.py --work-dir clean-run
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reproduction-results
+          path: |
+            clean-run/results/
+            clean-run/clean_reproduction.json
+            clean-run/tests.log
+            clean-run/isolation.json
+          if-no-files-found: warn

@@ -1,0 +1,11 @@
+include README.md LICENSE CITATION.cff CONTRIBUTING.md CHANGELOG.md requirements*.txt reproduce.py topics.txt
+include .gitignore .gitattributes .editorconfig .python-version
+recursive-include docs *.md
+recursive-include inputs *.md *.json *.npz
+recursive-include scripts *.py
+recursive-include reference *.md *.txt *.json *.npz *.png *.pdf *.tex *.csv
+recursive-include tests *.py
+recursive-include .github *.yml
+global-exclude *.py[cod] .DS_Store
+prune outputs
+prune clean-run
