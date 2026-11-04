@@ -1,6 +1,6 @@
 # Gap arrangement in nonlocal particle transport
 
-This repository contains reproducible Python simulations accompanying the mathematical study of Georgia Karali and Vangelis D. Karalis on "Gap arrangement in nonlocal particle transport".
+This repository contains Python simulations for *Gap arrangement and quantitative nonclosure in nonlinear nonlocal particle transport* by Georgia Karali and Vangelis D. Karalis.
 
 The research investigates how the spatial arrangement of microscopic interparticle gaps affects the time evolution and macroscopic dynamics of nonlocally interacting particle systems.
 A central result is that systems with identical initial particle densities, gap-value distributions, and macroscopic velocities can nevertheless develop different macroscopic dynamics due to differences in their microscopic gap arrangements.
@@ -23,9 +23,28 @@ publication or article DOI is claimed. The citation below identifies the softwar
 **Study contributor:** Georgia Karali — Department of Mathematics, National and
 Kapodistrian University of Athens.
 
-The repository reproduces **two figures and two tables**, includes independent
-numerical audits, and supplies the original numerical outputs for comparison.
-No external data, credentials, GPU, or LaTeX installation is required.
+## Manuscript figures and tables
+
+The manuscript contains **five figures and five tables**. This GitHub release
+(v1.0.0) reproduces Figures 1–2 and Tables 1–2. The manuscript's separate
+computational supplement, `GAD_Reproducibility_Rephrased.zip` (2026-11-02-r5),
+contains the additional experiments for Figures 3–5 and Tables 3–5.
+
+| Manuscript item | Experiment | Where to reproduce it |
+| --- | --- | --- |
+| Figure 1 and Tables 1–2 | Particle approximation, small-time response and fast relaxation | GitHub v1.0.0, `python -m gap_arrangement reproduce` |
+| Figure 2 | Circular Wasserstein distance with positive and zero diffusion | Same GitHub command |
+| Figures 3–4 and Table 3 | Frequency sweep, mesh and diffusivity checks, observation times and invariant diagnostics | Supplement, `simulations/extended_checks.py` |
+| Figure 5 and Table 4 | Nonlinear diffusion strength, contrast and harmonic generation | Supplement, `simulations/nonlinearity_checks.py` |
+| Table 5 | Small-time circular Wasserstein distance and separate refinement checks | Supplement, `simulations/wasserstein_checks.py` |
+
+**The file cited on page 37** is `simulations/wasserstein_results.json` inside
+the supplement's `GAD_Rephrased_Reproducibility/` directory. It contains the
+four Table 5 rows, both initial-data quadratures, and the changes under separate
+refinements of quadrature order, time step, macroscopic grid and cell grid.
+To regenerate the supplement's results, extract the ZIP, enter that directory,
+install `requirements.lock` in a Python 3.12.14 environment and run
+`python reproduce.py` there.
 
 ## Install
 
@@ -60,7 +79,7 @@ Alternatively, install only the dependencies with
 `python -m pip install -r requirements-lock.txt` and use `python reproduce.py` instead
 of `python -m gap_arrangement`. Both entry points call the same implementation.
 
-## Reproduce everything
+## Reproduce the GitHub v1.0.0 results
 
 Run from the repository root:
 
@@ -74,12 +93,13 @@ reference results. Allow several minutes on a recent laptop; runtime varies by
 hardware. Peak memory can approach 1 GB. The simulation itself runs offline after
 installation. A nonzero exit status indicates a failed check or execution error.
 
-Generated files appear under `outputs/`:
+The GitHub command writes the following files under `outputs/`.
 
 | Directory/file | Contents |
 | --- | --- |
-| `data/simulation_results.json`, `simulation_curves.npz` | Main results and time series |
-| `data/audit_results.json`, `audit_curves.npz` | Independent checks and relaxation curves |
+| `data/input_verification.json` | Agreement of regenerated initial conditions with the supplied inputs |
+| `data/simulation_results.json`, `data/simulation_curves.npz` | Main results and time series |
+| `data/audit_results.json`, `data/audit_curves.npz` | Independent checks and relaxation curves |
 | `data/sanity_results.json` | Supplementary affine experiment |
 | `data/certificate.json` | Exact rational observation-time bound for the affine example |
 | `data/verification.json` | Numerical comparison with the original results |
@@ -93,7 +113,7 @@ against use as an output directory. `outputs/` is ignored by Git. Reusing an out
 directory overwrites the corresponding generated files; use `--output-dir` to
 retain separate runs.
 
-## Full reproduction in a clean environment
+## Reproduce v1.0.0 in a clean environment
 
 With Python 3.12, run from the repository directory:
 
@@ -104,7 +124,7 @@ python scripts/clean_reproduce.py --work-dir clean-run
 The destination must not exist. This command creates a new virtual environment
 with system packages disabled, downloads the pinned dependencies from PyPI
 without using a pip cache, builds and installs the package, checks dependency
-consistency and isolation, runs the tests, and recomputes every simulation from
+consistency and isolation, runs the tests, and recomputes the v1.0.0 simulations from
 outside the source directory using isolated Python (`-I`). It records the
 environment and results in `clean-run/clean_reproduction.json`. Network access
 is needed for installation; the numerical run itself uses only supplied data.

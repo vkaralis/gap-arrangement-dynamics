@@ -2,10 +2,11 @@
 
 ## Scope and source
 
-The repository is a standalone numerical experiment with a complete model
-specification. It separates synthetic inputs, computed outputs and scientific
-checks. All initial conditions are generated analytically; the supplied inputs
-and expected numerical outputs are sufficient for reproduction.
+The v1.0.0 pipeline recomputes manuscript Figures 1–2 and Tables 1–2 from
+analytic initial conditions and compares the results with the supplied
+reference data. Figures 3–5, Tables 3–5 and the Table 5 refinement record
+(`simulations/wasserstein_results.json`) belong to the separate manuscript
+supplement. See the [manuscript figure and table guide](../README.md#manuscript-figures-and-tables).
 
 The complete pipeline runs the audit before generating Figure 1, because its
 relaxation panels use audit results. Missing audit files cause an explicit error.
