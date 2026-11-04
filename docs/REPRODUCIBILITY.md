@@ -2,14 +2,11 @@
 
 ## Scope and source
 
-The v1.0.0 pipeline recomputes manuscript Figures 1–2 and Tables 1–2 from
-analytic initial conditions and compares the results with the supplied
-reference data. Figures 3–5, Tables 3–5 and the Table 5 refinement record
-(`simulations/wasserstein_results.json`) belong to the separate manuscript
-supplement. See the [manuscript figure and table guide](../README.md#manuscript-figures-and-tables).
+The pipeline runs the particle and continuum simulations from analytic initial
+conditions and compares their results with the supplied reference data.
 
-The complete pipeline runs the audit before generating Figure 1, because its
-relaxation panels use audit results. Missing audit files cause an explicit error.
+The complete pipeline runs the audit before rendering the plots because the
+relaxation curves use audit results. Missing audit files cause an explicit error.
 Reference plots can be regenerated with the `figures` command without running
 the ODE solvers; this is documented as rendering existing data, not recomputation.
 
@@ -54,7 +51,7 @@ and `7713`; the scientific trajectories are deterministic.
    must match the reference text. Every CSV header, row and numeric cell is
    checked against its validated JSON source, using relative tolerance `1e-12`
    and zero absolute tolerance. Missing rows, non-finite values and extra columns
-   fail verification. Both figures are regenerated in a temporary directory from
+   fail verification. The plots are regenerated in a temporary directory from
    the validated saved data: PNG pixels and metadata-free PDF bytes must match
    these freshly rendered outputs. A swapped figure or changed pixel fails.
    This compares within the current rendering environment, rather than requiring

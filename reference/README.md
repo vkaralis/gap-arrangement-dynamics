@@ -2,8 +2,6 @@
 
 These files are the frozen reference for GitHub v1.0.0. The reproduction command
 computes new results in `outputs/` and compares them with this directory.
-For Figures 3–5, Tables 3–5 and `wasserstein_results.json`, see the
-[guide to the separate manuscript supplement](../README.md#manuscript-figures-and-tables).
 
 | File | Interpretation |
 | --- | --- |
@@ -12,8 +10,8 @@ For Figures 3–5, Tables 3–5 and `wasserstein_results.json`, see the
 | `data/audit_results.json` | Independent solvers, conservation/identity checks, quadrature, refinements and relaxation summaries |
 | `data/audit_curves.npz` | Relaxation errors and normalized-cell variance |
 | `data/sanity_results.json` | Supplementary affine experiment (`beta=0`, `T=0.01`) |
-| `figures/` | Manuscript Figures 1–2, PDF and PNG |
-| `tables/` | Manuscript Tables 1–2, rounded LaTeX tables and full-precision CSV exports |
+| `figures/` | Simulation plots in PDF and PNG |
+| `tables/` | Rounded LaTeX tables and full-precision CSV exports |
 
 NPZ files are NumPy compressed archives. Load them with
 `numpy.load(path, allow_pickle=False)`. Every curve is a one-dimensional array

@@ -34,6 +34,6 @@
 
 ## [0.5.0]
 
-- Initial standalone particle/cell simulations, two figures and two tables.
+- Initial standalone particle and cell simulations.
 - Synthetic input generation, independent numerical audits and frozen reference data.
 - Python 3.12 environment specification, clean reproduction script and CI workflows.
