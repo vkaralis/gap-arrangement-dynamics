@@ -86,7 +86,8 @@ The joint error at each output time is `E_N + D_N`, where `E_N` is the maximum
 absolute gap error and `D_N` the maximum difference of lifted positions. Periodic
 cubic interpolation samples the cell at the actual labels and fast phases;
 positions are interpolated through their periodic displacement `X-a`.
-Table 1 reports the maximum over the 101 uniform times for the `k=1` preparation.
+For the `k=1` preparation, the reported error is the maximum of `E_N + D_N`
+over the 101 uniformly spaced output times.
 Along `N=n^3`, both `p/N` and `p^(-2)` equal `N^(-2/3)`, giving the plotted guide.
 
 The observable is
@@ -97,9 +98,9 @@ $$J_k(t)=\int_0^1\psi(X^{(k)}(t,a))\,da,\qquad
 Its difference is evaluated through a sine-product identity to reduce numerical
 cancellation. Independent initial-data quadrature predicts
 `(J2-J1)/t^2 -> C2/2`: approximately 0.741984411175 for nonlinear diffusion and
-0.365253559927 for affine diffusion. The coefficient row of Table 2 comes from
-that integral, not a numerical extrapolation. Its CSV response file contains
-positive times; the zero-time coefficients are in `theoretical_coefficients.csv`.
+0.365253559927 for affine diffusion. The zero-time coefficients computed from
+this integral are stored in `theoretical_coefficients.csv`. The response data
+cover positive times.
 
 ### Explicit response coefficient
 
